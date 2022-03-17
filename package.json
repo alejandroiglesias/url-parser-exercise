@@ -1,0 +1,23 @@
+{
+  "name": "url-parser-exercise",
+  "version": "1.0.0",
+  "description": "Exercise using a minimalistic Alpine.js + Tailwind frontend stack.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "scripts": {
+    "start": "npx live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejandroiglesias/url-parser-exercise.git"
+  },
+  "author": "Alejandro García Iglesias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejandroiglesias/url-parser-exercise/issues"
+  },
+  "homepage": "https://github.com/alejandroiglesias/url-parser-exercise#readme"
+}
