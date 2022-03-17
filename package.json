@@ -2,7 +2,6 @@
   "name": "url-parser-exercise",
   "version": "1.0.0",
   "description": "Exercise using a minimalistic Alpine.js + Tailwind frontend stack.",
-  "main": "index.js",
   "dependencies": {},
   "devDependencies": {
     "live-server": "^1.2.1"
