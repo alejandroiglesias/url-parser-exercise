@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>URL Parser</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tailwindcss/forms@0.5.0/dist/tailwind.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="js/index.js"></script>
+  </head>
+  <body class="font-roboto text-white text-lg bg-indigo-700">
+    <div class="fixed inset-0">
+      <ul class="banner-shape-images list-none pointer-events-none">
+        <li><img src="images/banner_shap1.png" alt="" /></li>
+        <li><img src="images/banner_shap4.png" alt="" /></li>
+        <li><img src="images/banner_shap3.png" alt="" /></li>
+      </ul>
+    </div>
+
+    <div class="container mx-auto relative py-36 md:py-44" x-data="app">
+      <div class="w-5/6 md:w-1/2 mx-auto">
+        <div class="text-center mb-14">
+          <h1 class="font-bold text-5xl mb-3">URL Parser</h1>
+          <p>Enter a format, a URL and hit <em>Parse</em> to see the result</p>
+        </div>
+        <form class="mb-14" @submit.prevent="parse">
+          <div class="mb-4">
+            <label class="hidden" for="format">Format</label>
+            <input
+              class="bg-slate-800 border-none w-full px-10 py-4 rounded-full focus:ring-transparent"
+              id="format"
+              type="text"
+              x-model="format"
+              placeholder="Format"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label class="hidden" for="url">URL</label>
+            <input
+              class="bg-slate-800 border-none w-full px-10 py-4 rounded-full focus:ring-transparent"
+              id="url"
+              type="text"
+              x-model="url"
+              placeholder="URL"
+            />
+          </div>
+
+          <div class="flex items-center">
+            <button
+              class="bg-indigo-600 rounded-full px-10 py-4 text-base"
+              type="button"
+              @click="loadExample"
+            >
+              Load example
+            </button>
+            <button
+              class="bg-blue-900 hover:bg-white hover:text-blue-900 transition-colors rounded-full px-10 py-4 text-base ml-auto"
+              type="submit"
+            >
+              Parse
+            </button>
+          </div>
+        </form>
+
+        <div x-show="result" x-cloak>
+          <p class="font-bold mb-2">Result:</p>
+          <pre class="bg-slate-800 rounded-lg p-8 overflow-auto" x-html="result"></pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
